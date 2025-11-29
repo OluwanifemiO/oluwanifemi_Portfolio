@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fiona's Portfolio - Purple Theme</title>
+    <meta name="description" content="Welcome to Fiona's universe! I'm an ENFJ idealist, creator, and lifelong learner passionate about making the world better.">
+    <meta name="keywords" content="Fiona, portfolio, ENFJ, creator, idealist, designer, developer">
+    <meta property="og:title" content="Fiona's Portfolio - Purple Theme">
+    <meta property="og:description" content="Welcome to Fiona's universe! I'm an ENFJ idealist, creator, and lifelong learner passionate about making the world better.">
+    <meta name="twitter:title" content="Fiona's Portfolio - Purple Theme">
+    <meta name="twitter:description" content="Welcome to Fiona's universe! I'm an ENFJ idealist, creator, and lifelong learner passionate about making the world better.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #6B46C1;
+            --secondary-color: #EDE9FE;
+            --accent-color: #8B5CF6;
+            --text-primary: #1E1B4B;
+            --text-secondary: #4B5563;
+            --bg-gradient-start: #FEFEFE;
+            --bg-gradient-end: #F8FAFC;
+            --cute-pink: #E879F9;
+            --cute-yellow: #FDE047;
+            --cute-mint: #A7F3D0;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+        }
+        
+        h1, h2, h3 {
+            color: var(--text-primary);
+        }
+        
+        p {
+            color: var(--text-secondary);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-[var(--accent-color)] hover:scale-105 shadow-lg;
+        }
+        
+        .card-hover {
+            @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/PurpleHeader.js"></script>
+    <script type="text/babel" src="components/PurpleHero.js"></script>
+    <script type="text/babel" src="components/PurpleAbout.js"></script>
+    <script type="text/babel" src="components/PurpleSkills.js"></script>
+    <script type="text/babel" src="components/PurpleContact.js"></script>
+    <script type="text/babel" src="purple-app.js"></script>
+</body>
+</html>

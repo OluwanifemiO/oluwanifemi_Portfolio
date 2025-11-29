@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oluwanifemi Ogidama- Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #8B5CF6;
+            --secondary-color: #F3E8FF;
+            --accent-color: #A855F7;
+            --text-primary: #1F2937;
+            --text-secondary: #4B5563;
+            --bg-gradient-start: #FEFEFE;
+            --bg-gradient-end: #F8FAFC;
+            --cute-pink: #FFB6C1;
+            --cute-yellow: #FFF4B7;
+            --cute-mint: #B8F2E6;
+            --section-hero: #FEFEFE;
+            --section-about: #F8F4FF;
+            --section-skills: #FEFEFE;
+            --section-contact: #F0F9FF;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+        }
+        
+        h1, h2, h3 {
+            color: var(--text-primary);
+        }
+        
+        p {
+            color: var(--text-secondary);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-[var(--accent-color)] hover:scale-105;
+        }
+        
+        .card-hover {
+            @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+
+    @layer utilities {
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .floating-circle {
+            @apply absolute rounded-full opacity-20 animate-pulse;
+        }
+        
+        .cute-circle {
+            @apply w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-lg;
+        }
+        
+        .emoji-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    }
+    </style>
+
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.jsx"></script>
+    <script type="text/babel" src="components/Hero.jsx"></script>
+    <script type="text/babel" src="components/Projects.jsx"></script>
+    <script type="text/babel" src="components/Skills.jsx"></script>
+    <script type="text/babel" src="components/Contact.jsx"></script>
+    <script type="text/babel" src="App.jsx"></script>
+  </body>
+</html>

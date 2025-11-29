@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fiona's Universe - Cartoon Style</title>
+    <meta name="description" content="Welcome to Fiona's colorful universe! I'm an ENFJ idealist, creator, and lifelong learner passionate about making the world better.">
+    <meta name="keywords" content="Fiona, portfolio, ENFJ, creator, idealist, designer, developer, cartoon">
+    <meta property="og:title" content="Fiona's Universe - Cartoon Style">
+    <meta property="og:description" content="Welcome to Fiona's colorful universe! I'm an ENFJ idealist, creator, and lifelong learner passionate about making the world better.">
+    <meta name="twitter:title" content="Fiona's Universe - Cartoon Style">
+    <meta name="twitter:description" content="Welcome to Fiona's colorful universe! I'm an ENFJ idealist, creator, and lifelong learner passionate about making the world better.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #A855F7;
+            --secondary-color: #F3E8FF;
+            --accent-color: #C084FC;
+            --text-primary: #1E1B4B;
+            --text-secondary: #4B5563;
+            --bg-gradient-start: #E879F9;
+            --bg-gradient-middle: #A855F7;
+            --bg-gradient-end: #7C3AED;
+            --cute-pink: #FFB6C1;
+            --cute-yellow: #FDE047;
+            --cute-mint: #A7F3D0;
+            --card-bg: #FEFEFE;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Comic Sans MS', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-middle), var(--bg-gradient-end));
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3 {
+            color: var(--text-primary);
+        }
+        
+        p {
+            color: var(--text-secondary);
+        }
+    }
+
+    @layer components {
+        .btn-cartoon {
+            @apply bg-white text-[var(--primary-color)] px-8 py-4 rounded-full font-bold transition-all duration-300 hover:scale-110 shadow-xl border-4 border-[var(--primary-color)];
+        }
+        
+        .card-cartoon {
+            @apply bg-[var(--card-bg)] rounded-3xl shadow-2xl border-4 border-white transition-all duration-300 hover:scale-105 hover:rotate-1;
+        }
+        
+        .floating-element {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .bounce-element {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translateY(0px); }
+            40%, 43% { transform: translateY(-15px); }
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/CartoonHeader.js"></script>
+    <script type="text/babel" src="components/CartoonHero.js"></script>
+    <script type="text/babel" src="components/CartoonAbout.js"></script>
+    <script type="text/babel" src="components/CartoonSkills.js"></script>
+    <script type="text/babel" src="components/CartoonContact.js"></script>
+    <script type="text/babel" src="cartoon-app.js"></script>
+</body>
+</html>
