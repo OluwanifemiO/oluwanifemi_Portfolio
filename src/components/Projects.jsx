@@ -37,12 +37,12 @@ export default function Projects() {
       },
       {
         id: 4,
-        name: "Crochet Project Tracker",
+        name: "Threaded",
         description:
-          "An upcoming project management tool tailored for crochet enthusiasts to plan, track, and showcase their crochet projects.",
+          "An upcoming eCommerce website specializing in handmade crochet products, aiming to provide a unique shopping experience with a focus on quality and craftsmanship.",
         image: null,
         link: null,
-        tags: ["Crochet", "Crafts", "Project Management", "Tech Stack TBD"],
+        tags: ["Crochet", "Crafts", "eCommerce", "Tech Stack TBD", "StripeAPI"],
         isActive: false,
       },
     ];
