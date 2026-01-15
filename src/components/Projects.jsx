@@ -22,7 +22,7 @@ export default function Projects() {
           "My personal portfolio website showcasing my skills, projects, and contact information to connect with potential collaborators and employers.",
         image: `${portfolioImage}`,
         link: null,
-        tags: ["Portfolio", "JavaScript", "React", "EmailJS", "TailwindCSS", "Vercel", "GitHub"],
+        tags: ["Portfolio", "JavaScript", "React", "EmailJS", "TailwindCSS", "Azure", "GitHub"],
         isActive: true,
       },
       {
