@@ -21,7 +21,7 @@ export default function Projects() {
         description:
           "My personal portfolio website showcasing my skills, projects, and contact information to connect with potential collaborators and employers.",
         image: `${portfolioImage}`,
-        link: null,
+        link: "https://oluwanifemi-portfolio.vercel.app/",
         tags: ["Portfolio", "JavaScript", "React", "EmailJS", "TailwindCSS", "Vercel", "GitHub"],
         isActive: true,
       },
